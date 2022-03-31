@@ -1,0 +1,10 @@
+<h3 mat-dialog-title>Do yo want to selete {{pokemoninfo.forms[0].name}}</h3>
+<mat-dialog-content class="mat-typography">
+  <img [src]="pokemoninfo.sprites.front_default" alt="">
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+  <button mat-button (click)="onClickNoThanks()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.selected" cdkFocusInitial>
+    Ok
+  </button>
+</mat-dialog-actions>

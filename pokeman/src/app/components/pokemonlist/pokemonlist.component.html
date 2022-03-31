@@ -1,0 +1,12 @@
+<div class="container" [ngClass]="{changed_container: showButton}">
+  <app-pokemoninfo
+    *ngFor="let info of pokemonshow"
+    [pokemoninfo]="info"
+    (click)="onClick(info)"
+  >
+  </app-pokemoninfo>
+</div>
+
+<div *ngIf="showButton" class="allButton">
+  <button (click)="onClickAll()">All</button>
+</div>

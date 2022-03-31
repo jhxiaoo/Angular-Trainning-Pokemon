@@ -1,0 +1,18 @@
+  <mat-card>
+    <mat-card-title>
+      <img
+        class="img"
+        [src]="pokemoninfo.sprites.other.dream_world.front_default"
+        alt=""
+      />
+    </mat-card-title>
+    <mat-card-content>
+      <h3>{{ pokemoninfo.forms[0].name.toUpperCase() }}</h3>
+      <div># {{ pokemoninfo.id }}</div>
+      <div>Weight {{ pokemoninfo.weight }}</div>
+      <div>Height {{ pokemoninfo.height }}</div>
+      <ul *ngFor="let type of pokemoninfo.types">
+        <li>{{ type.type.name }}</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>  
